@@ -63,7 +63,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     'ng-annotate-loader',
-                    'babel-loader'
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['es2015']
+                        }
+                    }
                 ]
             },
 
